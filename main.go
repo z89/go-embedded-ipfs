@@ -48,14 +48,14 @@ func main() {
 			3. save the file to a given localtion on disk
 	**/
 
-	// // add() - adds any content to IPFS instance
-	// fileObj := add(ipfs, ctx, getFile("./data/directory/custom"))
+	// add() - adds any content to IPFS instance
+	fileObj := add(ipfs, ctx, getFile("./data/directory/custom"))
 
-	// // get() - get any given content from IPFS instance
-	// file := get(ipfs, ctx, fileObj.Cid().String())
+	// get() - get any given content from IPFS instance
+	file := get(ipfs, ctx, fileObj.Cid().String())
 
-	// // save() - save a file to any given directory
-	// save(tempPath, file, fileObj.Cid().String())
+	// save() - save a file to any given directory
+	save(tempPath, file, fileObj.Cid().String())
 
 	/// TEST 2 (must work online): PASSED
 	/** desc:
@@ -65,7 +65,6 @@ func main() {
 	**/
 
 	// add() - adds any content to IPFS instance
-	// QmdjWNJPGBWL8Vs5M6TFNatphsgTpiPRHXjWt7M5TsDXje - a random picture from pinata.cloud
 	fetchedFileObj := fetch(ipfs, ctx, "QmZULkCELmmk5XNfCgTnCyFgAVxBRBXyDHGGMVoLFLiXEN")
 
 	// get() - get any given content from IPFS instance
